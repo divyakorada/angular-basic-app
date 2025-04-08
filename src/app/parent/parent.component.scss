@@ -1,0 +1,25 @@
+.main-wrapper {
+    background-color: #e3e3e3;
+    padding: 10px;
+    border-radius: 10px;
+    h4 {
+        margin: 0 0 10px 0;
+    }
+    .strong {
+        color: blue;
+    }
+    &__subject {
+        padding-bottom: 10px;
+    }
+}
+
+.child-wrapper {
+    background-color: #c8c8c8;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;
+    margin: 10px auto;
+    h4 {
+        margin: 0 0 10px 0;
+    }
+}

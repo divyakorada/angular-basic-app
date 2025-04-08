@@ -1,0 +1,13 @@
+<div class="main-wrapper">
+    <h4>Im Sibling</h4>
+    <h4>Subject</h4>
+    <div class="main-wrapper__block">
+      <input type="text" #msg/>
+      <button (click)="sendMsg(msg)">Send data with Subject</button>
+    </div>
+    <div class="main-wrapper__block">
+      <h4>Behaviour Subject</h4>
+    {{message}}
+    <button (click)="newMessage()">Send Message</button>
+  </div>
+  </div>

@@ -1,0 +1,163 @@
+<!-- <app-header></app-header>
+<app-contacts></app-contacts> -->
+<!-- Reactive forms -->
+<!-- <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+ 
+    <p>
+      <label for="firstname">First Name </label>
+      <input type="text" id="firstname" name="firstname" formControlName="firstname">
+    </p>
+   
+    <p>
+      <label for="lastname">Last Name </label>
+      <input type="text" id="lastname" name="lastname" formControlName="lastname">
+    </p>
+   
+    <p>
+      <label for="email">Email </label>
+      <input type="text" id="email" name="email" formControlName="email">
+    </p>
+   
+    <p>
+      <label for="gender">Geneder </label>
+      <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
+      <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
+    </p>
+   
+    <p>
+      <label for="isMarried">Married </label>
+      <input type="checkbox" id="isMarried" name="isMarried" formControlName="isMarried">
+    </p>
+   
+   
+    <p>
+      <label for="country">country </label>
+      <select id="country" name="country" formControlName="country">
+        <option value="1">India</option>
+        <option value="2">USA</option>
+        <option value="3">England</option>
+        <option value="4">Singapore</option>
+      </select>
+    </p>
+   
+   
+    <p>
+      <button type="submit" >Submit</button><!--  [disabled]="!contactForm.valid" 
+    </p>
+   
+  </form>
+  <!-- Reactive forms 
+
+  Your text: <input type="text" [(ngModel)]="userText"/>
+  <simple [simpleInput]="userText"></simple>
+  <div>
+
+
+
+<ng-template #dynamicTemplate let-message="message">
+  <p>{{ message }}</p>
+</ng-template>
+
+<div>
+  <h2>Dynamic Render Component</h2>
+  <button (click)="renderTemplate('Hello from Template 1')">Render Template 1</button>
+  <button (click)="renderTemplate('Greetings from Template 2')">Render Template 2</button>
+
+  <ng-container *ngTemplateOutlet="dynamicTemplate; context: dynamicContext"></ng-container>
+</div>
+</div>
+<app-template-driven></app-template-driven>
+
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul> -->
+
+<div class="header-ctn">
+  <nav>
+    <ul class="nav-list">
+      <li routerLink="/home">Home</li>
+      <li routerLink="/aboutus">About</li>
+      <li routerLink="/users">Users</li>
+      <li routerLink="/users">Courses</li>
+      <li routerLink="/users">Cour Details</li>
+    </ul>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
+
+<ng-template #divya>
+  <p>{{data}}</p>
+
+</ng-template>
+
+<app-rxjs-operators></app-rxjs-operators>
+
+<hr>
+<h4>Subject & component communication Example</h4>
+<app-sibling></app-sibling>
+<app-parent></app-parent>
+<hr>
+
+<h4>Activated Route</h4>
+
+<!-- <ol>
+  <li><a routerLink="">Home</a></li>
+  <li><a routerLink="['products']">Products</a></li>
+</ol>
+
+<router-outlet></router-outlet> -->
+<hr>
+
+<input type="text" [(ngModel)]="searchText"/>
+
+<ul>
+  <li *ngFor="let item of categories | search : searchText : 'categoryName' ">{{item.categoryName}}</li>
+</ul>
+
+
+<app-pagination></app-pagination>
+
+
+<h2>Normal pipe</h2>
+<p>{{ currentDate | age:'yyyy/MM/dd' }}</p>
+<p>{{birthday | date}}</p>
+
+<h2>Parameterized pipe</h2>
+<p>{{birthday | date:'dd/MM/yyyy'}}</p>
+<p>{{birthday | date:'MM-dd-yyyy'}}</p>
+<p>{{birthday | date:'long'}}</p>
+<div>{{salary | currency: 'INR'}}</div>
+<div>{{salary | currency: 'INR': 'code'}}</div>
+
+
+<h2>Pipe chain</h2>
+<p>{{birthday | date:'fullDate' | uppercase}}</p>
+
+
+<h2>Percentage</h2>
+<div>{{num | percent}}</div>
+<div>{{name | titlecase}}</div>
+<div>{{stringPipe | revstring}}</div>
+<h2>Change date format using custom pipe</h2>
+<div>{{user.city | age: user.city}}</div>
+<table border="1px solid red" class="age-table">
+  <thead>
+    <th>DOB</th>
+    <th>Age</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.bod | date:'dd/MM/yyyy'}}</td>
+      <td>{{user.bod | age}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2>Pure & Impure Pipes</h2>
+<input type="text" #InputMsg/>
+<button type="button" (click)="addItem(InputMsg.value)">click me</button>
+<p>{{country | pureImpure}}</p>
+
+

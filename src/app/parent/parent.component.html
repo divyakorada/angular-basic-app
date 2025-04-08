@@ -1,0 +1,21 @@
+<div class="main-wrapper">
+    <h4>Im Parent</h4>
+    <div class="main-wrapper__subject">{{showInputMsg}}</div>
+    <div>{{message}}</div>
+  <hr>
+  <h4>component communication</h4>
+  <div>Receive Message from child: <strong class="strong">{{childMessage}}</strong></div>
+  <app-child  (messageEvent)="recieveMessage($event)" [childMsg] = parentMessage></app-child>
+  <div class="child-wrapper">
+    <h4>View child</h4>
+    <app-counter #showCount></app-counter>
+    </div>
+    <div> Counter: {{showCount.counter}}</div>
+    <button (click)="inc()">Increment</button>
+    <button (click)="dec()">Decrement</button>
+  
+
+</div>
+
+
+

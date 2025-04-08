@@ -1,0 +1,47 @@
+<p>{{hello.id}}</p>
+<form #myForm=ngForm (ngSubmit)="onSubmit(myForm)"><!--  -->
+  <!-- Add form controls and their validation attributes -->
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" name="username" ngModel required minlength="4" maxlength="20">
+    <div *ngIf="myForm.controls['username']?.invalid && (myForm.controls['username'].dirty || myForm.controls['username'].touched)">
+      <div *ngIf="myForm.controls['username'].errors?.required">Username is required.</div>
+      <div *ngIf="myForm.controls['username'].errors?.minlength">Username must be at least 4 characters long.</div>
+      <div *ngIf="myForm.controls['username'].errors?.maxlength">Username cannot exceed 20 characters.</div>
+    </div>
+  </div>
+
+  <p>
+    <label for="firstname">First Name</label>
+    <input type="text" name="firstname" #fname="ngModel" ngModel>
+    Value    : {{fname.value}}
+  </p>
+ 
+  <p>
+    <label for="lastname">Last Name</label>
+    <input type="text" name="cc"/><!--  [(ngModel)]="user.lastName" -->
+    {{user.lastName}}
+  </p>
+ 
+  <p>
+    <label for="email">Email </label>
+    <input type="text" id="email" name="email" ngModel>
+  </p>
+ 
+  <p>
+    <label for="gender">Geneder</label>
+    <input type="radio" value="male" name="gender" ngModel> Male
+    <input type="radio" value="female" name="gender" ngModel> Female
+  </p>
+ 
+  <p>
+    <label for="isMarried">Married</label>
+    <input type="checkbox" name="isMarried" ngModel>
+  </p>
+ 
+
+
+  <!-- Add other form controls and their validation attributes -->
+  
+  <button type="submit">Submit</button>
+</form>
