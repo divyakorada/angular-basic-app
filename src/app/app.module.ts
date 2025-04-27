@@ -34,11 +34,11 @@ import { PureImpurePipe } from './pipes/pure-impure.pipe';
 
 
 const routes: Routes = [
- /*  { path: ' ', redirectTo: 'home' },
+   { path: ' ', redirectTo: 'home' },
   { path: 'home', component: HomeComponent }, 
   { path: 'aboutus', component: AboutusComponent},
   { path: 'users', component: UsersComponent},
-  { path: 'users/:id', component: TemplateDrivenComponent}, */
+  { path: 'users/:id', component: TemplateDrivenComponent}, 
 
 ]
   
@@ -54,7 +54,6 @@ const routes: Routes = [
     SiblingComponent,
     TemplateDrivenComponent,
     AboutusComponent,
-    HomeComponent,
     UsersComponent,
     RxjsOperatorsComponent,
     ChildComponent,

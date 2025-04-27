@@ -24,7 +24,7 @@ export class RxjsOperatorsComponent implements OnInit {
 
   ngOnInit(): void {
     /* takeUntil */
-       this.obs.subscribe(val => console.log(val));
+       this.obs.subscribe(val => val);
     /* takeUntil */
 
     /* Debounce time */

@@ -1,7 +1,31 @@
-<!-- <app-header></app-header>
-<app-contacts></app-contacts> -->
-<!-- Reactive forms -->
-<!-- <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" routerLink="home">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="aboutus">About us</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="users">Users</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="users">Interview</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="profile">Profile</a>
+  </li>
+  <li class="nav-item"  routerLink="login">
+    <a class="nav-link">Login</a>
+  </li>
+</ul>
+
+
+<router-outlet></router-outlet>
+
+<!--<app-header></app-header>
+<app-contacts></app-contacts>
+<!~~ Reactive forms ~~>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
  
     <p>
       <label for="firstname">First Name </label>
@@ -19,7 +43,7 @@
     </p>
    
     <p>
-      <label for="gender">Geneder </label>
+      <label for="gender">Gender </label>
       <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
       <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
     </p>
@@ -42,11 +66,11 @@
    
    
     <p>
-      <button type="submit" >Submit</button><!--  [disabled]="!contactForm.valid" 
+      <button type="submit" >Submit</button>
     </p>
    
   </form>
-  <!-- Reactive forms 
+ <!~~Reactive forms ~~>
 
   Your text: <input type="text" [(ngModel)]="userText"/>
   <simple [simpleInput]="userText"></simple>
@@ -70,7 +94,7 @@
 
 <ul>
   <li *ngFor="let item of items">{{ item }}</li>
-</ul> -->
+</ul> 
 
 <div class="header-ctn">
   <nav>
@@ -101,12 +125,12 @@
 
 <h4>Activated Route</h4>
 
-<!-- <ol>
+<!~~ <ol>
   <li><a routerLink="">Home</a></li>
   <li><a routerLink="['products']">Products</a></li>
 </ol>
 
-<router-outlet></router-outlet> -->
+<router-outlet></router-outlet> ~~>
 <hr>
 
 <input type="text" [(ngModel)]="searchText"/>
@@ -159,5 +183,5 @@
 <input type="text" #InputMsg/>
 <button type="button" (click)="addItem(InputMsg.value)">click me</button>
 <p>{{country | pureImpure}}</p>
-
+-->
 

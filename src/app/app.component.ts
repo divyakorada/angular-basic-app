@@ -90,7 +90,7 @@ renderTemplate(message: string) {
 items: string[] = ['Item 1', 'Item 2', 'Item 3', 'hi', 'hello'];
 
   ngAfterViewChecked() {
-    console.log('View checked and updated!');
+   // console.log('View checked and updated!');
   }
 
   // search text property
