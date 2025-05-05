@@ -1,0 +1,12 @@
+<p>{{'pipe works!' | reverse}}</p>
+<p>{{'Hi Im divya from hyderabad' | uppercase}}</p>
+<p>{{'Hi Im divya from hyderabad' | UppercaseFirst}}</p>
+
+<input [(ngModel)]="inputVal" placeholder="Type here to trigger change detection!" />
+
+
+<p>Pure Pipe: {{ inputVal | reversePure }}</p>
+<p>Impure Pipe: {{ inputVal | reverseImpure }}</p>
+
+<p>Array length: {{ myArray | impureExample }}</p>
+<p>{{ 'angular' | pureExample }}</p>

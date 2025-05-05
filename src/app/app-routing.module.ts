@@ -12,6 +12,8 @@ import { MakeAPIComponent } from './components/make-api/make-api.component';
 import { FormComponent } from './components/form/form.component';
 import { DataCommunicationComponent } from './components/data-communication/data-communication.component';
 import { ListComponent } from './components/list/list.component';
+import { PipeComponent } from './components/pipes/pipe/pipe.component';
+import { CommonDirectiveComponent } from './components/Directives/common-directive/common-directive.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent, children: [
@@ -20,6 +22,8 @@ const routes: Routes = [
      { path: 'form', component: FormComponent },
      { path: 'data-communication', component: DataCommunicationComponent },
      { path: 'list', component: ListComponent },
+     { path: 'pipes', component: PipeComponent },
+     { path: 'custom-directive', component: CommonDirectiveComponent },
     { path: '', redirectTo: 'content-projection', pathMatch: 'full' }, // default tab
     
   ]},

@@ -20,10 +20,15 @@ export class MakeAPIComponent implements OnInit {
     this.getData();
   }
   getData() {
-    this.http.get(this.configUrl).subscribe((res) => {
+    this.http.get(this.configUrl).subscribe(
+    (res) => {
       console.log(res)
       this.showData = res;
-    })
+    },
+    (error) => {
+      console.error('Error occurred:', error);
+    }
+  )
   }
 
 }

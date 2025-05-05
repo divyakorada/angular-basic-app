@@ -1,1 +1,23 @@
-<p>list works!</p>
+<div class="card" style="width: 18rem;">
+    <div class="card-body"> 
+<ul class="list-group mb-3">
+    <li class="list-group-item"  *ngFor="let emp of employeeDetails">{{emp.name}}</li>
+</ul>
+
+<ul class="list-group mb-3">
+    <li class="list-group-item" *ngFor="let item of items">{{item}}</li>
+    <button class="btn btn-primary" (click)="updateOrder()">Update order</button>
+</ul>
+
+<table class="table table-bordered">
+    <thead></thead>
+    <tbody>
+    <tr *ngFor="let item of employeeDetails">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>

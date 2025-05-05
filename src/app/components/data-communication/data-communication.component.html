@@ -2,23 +2,20 @@
 <div class="card text-center"  style="width: 18rem; margin: 0 40px;">
     <div class="card-body">
         <h5 class="card-title">Parent</h5>
-        <p>Data: </p>
+        <p>Data: {{receivedMessage}}</p>
+        <p>The count is: {{siblingCommunication}}</p>
         <hr/>
-        <h5 class="card-title">Child</h5>
-        <p>Greeks for geek</p>
-        <p>Welcome to angular</p>
-        <button class="btn btn-primary">Send data to parent</button>
+       <app-child [color]="red" [primaryColor]="blue" (messageEvent)="recieveMessage($event)"></app-child>
+       <hr/>
+       <app-viewchild></app-viewchild>
     </div>
 </div>
-<div class="card text-center"  style="width: 18rem">
-    <div class="card-body">
-        <h5 class="card-title">Parent</h5>
-        <p>Data: </p>
-        <hr/>
-        <h5 class="card-title">Child</h5>
-        <button class="btn btn-primary">Send data to parent</button>
-    </div>
+<div class="card text-center"  style=" margin: 0 40px;padding: 10px;">
+    <h5>Slibling Communication</h5>
+<app-component-a></app-component-a>
+<app-component-b></app-component-b>
 </div>
+
 </div>
 
 
