@@ -16,9 +16,17 @@ export class FormComponent implements OnInit {
     password: ''
   }
 
-loginForm = new FormGroup({
-  uname: new FormControl('', [Validators.required, Validators.minLength(3)]),
-  pwd: new FormControl('', [Validators.required, Validators.minLength(6)])
+// loginForm = new FormGroup({
+//   uname: new FormControl('', [Validators.required, Validators.minLength(3)]),
+//   pwd: new FormControl('', [Validators.required, Validators.minLength(6)])
+// })
+
+loginForm = new FormGroup<{
+  uname: FormControl<string>;
+  pwd: FormControl<string>;
+}>({
+  uname: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.minLength(3)] }),
+  pwd: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.minLength(6)] }),
 })
   constructor() { }
 

@@ -10,3 +10,9 @@
 
 <p>Array length: {{ myArray | impureExample }}</p>
 <p>{{ 'angular' | pureExample }}</p>
+<h5> Passing parameters to pipes </h5>
+<p>{{'divya' | fullName: 'sree' : 'FL' : 'upper'}}</p>
+<p>{{'divya' | fullName: 'sree' : 'LF' : 'lower'}}</p>
+<p>{{'divya' | fullName: 'sree'}}</p>
+<h5>Combining multiple pipes in the same expression</h5>
+<p>{{'2025-05-14' | customDate | uppercase}}</p>

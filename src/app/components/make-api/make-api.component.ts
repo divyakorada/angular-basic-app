@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { catchError, of } from 'rxjs';
 
 @Component({
   selector: 'app-make-api',
@@ -20,7 +21,13 @@ export class MakeAPIComponent implements OnInit {
     this.getData();
   }
   getData() {
-    this.http.get(this.configUrl).subscribe(
+    this.http.get(this.configUrl).pipe(
+      catchError(error => {
+        console.error('Error fetching data', error);
+        return of([])
+      })
+    )
+    .subscribe(
     (res) => {
       console.log(res)
       this.showData = res;
