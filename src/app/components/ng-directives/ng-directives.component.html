@@ -1,0 +1,32 @@
+<ng-template #myTemplate>
+    <h5>ViewContainerRef</h5>
+ <p>This is my template content.</p>
+ <p>This is rendered with ViewContainerRef</p>
+</ng-template>
+
+<div #container></div>
+
+
+<h5>ngTemplateOutlet</h5>
+<!-- Parent Component's Template -->
+<div *ngIf="isStyled">
+  <ng-container *ngTemplateOutlet="styledTemplate; context: { $implicit: { message: 'Styled Template' } }"></ng-container>
+</div>
+<div *ngIf="!isStyled">
+  <ng-container *ngTemplateOutlet="plainStyleTemplate; context: { $implicit: { message: 'Plain Template' } }"></ng-container>
+</div>
+
+<!-- Templates -->
+<ng-template #styledTemplate let-context="$implicit">
+  <div class="styled">
+    {{ context.message }}
+  </div>
+</ng-template>
+
+<ng-template #plainStyleTemplate let-context="$implicit">
+  <div class="plain">
+    {{ context.message }}
+  </div>
+</ng-template>
+
+<button (click)="handleClick()">Click me</button>

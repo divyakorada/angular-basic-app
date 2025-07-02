@@ -3,7 +3,7 @@
     <form #userform="ngForm" (ngSubmit)="userForm(userform)">
         <div class="mb-3">
             <label class="me-3">UserName:</label>
-            <input type="text" name="userName" [(ngModel)]="user.UserName" #userName="ngModel" required minlength="3"/>
+            <input type="text" name="userName" [(ngModel)]="user.Username" #userName="ngModel" required minlength="3"/>
             <div *ngIf="userName?.invalid && userName?.touched">
                 <small class="text-danger" *ngIf="userName?.errors?.required">Name is required</small>
                 <small class="text-danger" *ngIf="userName?.errors?.minlength">Name must be at least 3 characters</small>

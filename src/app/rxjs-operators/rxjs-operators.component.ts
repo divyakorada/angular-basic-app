@@ -24,7 +24,10 @@ export class RxjsOperatorsComponent implements OnInit {
 
   ngOnInit(): void {
     /* takeUntil */
-       this.obs.subscribe(val => val);
+       this.obs.subscribe(val => {
+        console.log('val', val)
+        return  val;
+       });
     /* takeUntil */
 
     /* Debounce time */
@@ -38,7 +41,7 @@ export class RxjsOperatorsComponent implements OnInit {
   
       this.debounceObs=this.mform.valueChanges
       .pipe(
-        debounceTime(500),
+        debounceTime(1000),
         switchMap(id => {
  
           console.log('id', id)

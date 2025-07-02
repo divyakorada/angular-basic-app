@@ -73,3 +73,17 @@ export class ImpureExamplePipe implements PipeTransform {
     return value?.length;
   }
 }
+
+@Pipe({
+  name: 'evenNumbers',
+   standalone: true,
+ // pure: false
+})
+export class EvenNumbersPipe implements PipeTransform {
+
+  transform(values: number[]): number[] {
+    console.log('Pure pipe called');
+    return values.filter(num => num % 2 === 0);
+  }
+
+}

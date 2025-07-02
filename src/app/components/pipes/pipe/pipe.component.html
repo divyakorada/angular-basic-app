@@ -1,18 +1,36 @@
-<p>{{'pipe works!' | reverse}}</p>
-<p>{{'Hi Im divya from hyderabad' | uppercase}}</p>
-<p>{{'Hi Im divya from hyderabad' | UppercaseFirst}}</p>
+<p>{{ "pipe works!" | reverse }}</p>
+<p>{{ "Hi Im divya from hyderabad" | uppercase }}</p>
+<p>{{ "Hi Im divya from hyderabad" | UppercaseFirst }}</p>
 
-<input [(ngModel)]="inputVal" placeholder="Type here to trigger change detection!" />
-
+<input
+  [(ngModel)]="inputVal"
+  placeholder="Type here to trigger change detection!"
+/>
 
 <p>Pure Pipe: {{ inputVal | reversePure }}</p>
 <p>Impure Pipe: {{ inputVal | reverseImpure }}</p>
 
-<p>Array length: {{ myArray | impureExample }}</p>
-<p>{{ 'angular' | pureExample }}</p>
-<h5> Passing parameters to pipes </h5>
-<p>{{'divya' | fullName: 'sree' : 'FL' : 'upper'}}</p>
-<p>{{'divya' | fullName: 'sree' : 'LF' : 'lower'}}</p>
-<p>{{'divya' | fullName: 'sree'}}</p>
+<!-- <p>Array length: {{ myArray | impureExample }}</p> -->
+<p>{{ "angular" | pureExample }}</p>
+
+<ul>
+  <li *ngFor="let num of numbers | evenNumbers">
+    {{ num }}
+  </li>
+</ul>
+<p>
+  When you click the button, "6" won't show up in the list. Why? Because the
+  pipe is pure, and the reference of numbers hasn't changed. which is why impure
+  pipes are needed when the content inside arrays or objects may change without
+  the reference changing.
+</p>
+
+<button (click)="addNumber()">Add 6</button>
+<!-- https://chatgpt.com/share/68524eb9-c7ec-8001-866e-0fa1c2688a98 -->
+
+<h5>Passing parameters to pipes</h5>
+<p>{{ "divya" | fullName : "sree" : "FL" : "upper" }}</p>
+<p>{{ "divya" | fullName : "sree" : "LF" : "lower" }}</p>
+<p>{{ "divya" | fullName : "sree" }}</p>
 <h5>Combining multiple pipes in the same expression</h5>
-<p>{{'2025-05-14' | customDate | uppercase}}</p>
+<p>{{ "2025-05-14" | customDate | uppercase }}</p>

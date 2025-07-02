@@ -31,6 +31,8 @@ import { CustomDatePipe } from './pipes/custom-date.pipe';
 import { AgePipe } from './pipes/age.pipe';
 import { RevstringPipe } from './pipes/revstring.pipe';
 import { PureImpurePipe } from './pipes/pure-impure.pipe';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { MyexampleComponent } from './rxjs/child/myexmaple.component';
 
 
 const routes: Routes = [
@@ -65,7 +67,9 @@ const routes: Routes = [
     CustomDatePipe,
     AgePipe,
     RevstringPipe,
-    PureImpurePipe
+    PureImpurePipe,
+    RxjsComponent,
+    MyexampleComponent
   ],
   imports: [
     BrowserModule,

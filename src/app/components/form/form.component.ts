@@ -12,7 +12,7 @@ import { FormControl, ReactiveFormsModule, FormGroup, FormsModule, Validators} f
 export class FormComponent implements OnInit {
 
   user = {
-    UserName: '',
+    Username: '',
     password: ''
   }
 
