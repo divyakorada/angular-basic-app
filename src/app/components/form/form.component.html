@@ -50,10 +50,14 @@
                 </span>
             </div>
         </div>
+        <div class="mb-3">
+            <label class="me-3">Confirm Password:</label>
+            <input type="text" formControlName="conformpwd"/>
+              <div class="text-danger" *ngIf="loginForm.errors?.passwordMismatch && loginForm.touched">Passwords do not match.</div>
+        </div>
         <div class="d-grid gap-2">
         <button type="submit"  class="btn btn-primary" [disabled]="loginForm.invalid">Submit</button>
     </div>
-
     </form>
 </div>
 </div>

@@ -18,6 +18,7 @@ import { DebounceComponent } from './components/debounce/debounce.component';
 import { NgDirectivesComponent } from './components/ng-directives/ng-directives.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 
+
 const routes: Routes = [
   {path: 'home', component: HomeComponent, children: [
     { path: 'content-projection', component: ContentProjectionComponent },

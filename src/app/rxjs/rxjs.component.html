@@ -1,5 +1,17 @@
-<button (click)="showComponent = !showComponent">
+<!-- <button (click)="showComponent = !showComponent">
   Toggle MyExampleComponent
 </button>
 
-<app-myexample *ngIf="showComponent"></app-myexample>
+<app-myexample *ngIf="showComponent"></app-myexample> -->
+
+<div style="text-align: center;">
+  <h1>API Polling Example</h1>
+
+  <button (click)="startPolling()">Start Polling</button>
+  <button (click)="stopPolling()">Stop Polling</button>
+
+  <div *ngIf="pollingData">
+    <h3>Polled API Response:</h3>
+    <pre>{{ pollingData | json }}</pre>
+  </div>
+</div>

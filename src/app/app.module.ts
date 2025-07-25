@@ -84,7 +84,7 @@ const routes: Routes = [
     ContactsComponent
 ],
 
-  providers: [DataService, HelloGuard, AuthService],
+  providers: [DataService, HelloGuard, AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
